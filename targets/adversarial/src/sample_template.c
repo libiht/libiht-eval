@@ -14,6 +14,9 @@
 #include "utils.h"
 #include "malware.h"
 
+//
+// Global variables
+
 const char *progname = "sample_template";
 const char *progdesc = "Sample template malware program";
 int verbose = 0;
@@ -21,7 +24,9 @@ int debug = 0;
 
 int main(int argc, char *argv[]){
     process_command_line(argc, argv);
+
     // Some detection anti-instrumentation techniques implemenation
+
     shellcode();
     return 0;
 }
