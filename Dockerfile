@@ -27,7 +27,7 @@ RUN mkdir -p /tools/pin && \
 # Install DynamoRIO to tools directory and add to PATH
 RUN mkdir -p /tools/dynamorio && \
     curl -L https://github.com/DynamoRIO/dynamorio/releases/download/release_11.3.0-1/DynamoRIO-Linux-11.3.0.tar.gz | tar -xz -C /tools/dynamorio --strip-components=1 && \
-    echo "export DYNAMORIO_HOME=/tools/dynamorio/bin64" >> ~/.bashrc && \
+    echo "export DYNAMORIO_HOME=/tools/dynamorio" >> ~/.bashrc && \
     echo "export PATH=\$DYNAMORIO_HOME/bin64:\$PATH" >> ~/.bashrc
 
 # TODO: Install Intel SDE?
