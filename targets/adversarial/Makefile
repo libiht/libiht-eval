@@ -8,7 +8,8 @@ BUILD_DIR := build
 
 # Common source files used by all samples
 COMMON_SRC := $(SRC_DIR)/malware.c \
-			  $(SRC_DIR)/utils.c
+			  $(SRC_DIR)/utils.c \
+			  $(SRC_DIR)/pmparser.c
 
 # Object files built from the common source files
 COMMON_OBJ := $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(COMMON_SRC))

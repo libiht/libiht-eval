@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
 //  File          : src/sample_template.c
-//  Description   :
+//  Description   : This is a sample malware program that is used to demonstrate
 //
 //   Author : Thomason Zhao
 //
