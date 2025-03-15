@@ -19,8 +19,8 @@
 //
 // Global variables
 
-const char *progname = "sample_template";
-const char *progdesc = "Sample template malware program";
+const char *progname = "sample_ea_mapname";
+const char *progdesc = "Sample adopts environmental artifacts detection - checks for mapped files name for known DBI framework values";
 int verbose = 0;
 int debug = 0;
 
