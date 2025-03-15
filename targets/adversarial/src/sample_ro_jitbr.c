@@ -32,6 +32,14 @@ int debug = 0;
 
 static const int num_iter = 10;
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// Function     : detect_jit_br_time
+// Description  : Detect JIT branch overhead
+//
+// Inputs       : None
+// Outputs      : 0 if JIT branch overhead not detected, -1 otherwise
+
 int detect_jit_br_time(void) {
     unsigned long long times[num_iter], diff_times[num_iter - 1];
 
