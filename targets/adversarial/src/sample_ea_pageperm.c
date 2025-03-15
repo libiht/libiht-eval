@@ -38,7 +38,7 @@ int detect_pageperm(void) {
     procmaps_struct *maps;
 
     if (pmparser_parse(-1, &maps_it) != 0) {
-        print_error("Failed to parse the memory maps.");
+        print_error("Failed to parse the memory maps.\n");
         return -1;
     }
 

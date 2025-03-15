@@ -2,7 +2,7 @@
 
 CC := gcc
 CFLAGS := -Wall -Wextra -Iinclude -Og -g
-LDFLAGS := -lm
+LDFLAGS :=
 SRC_DIR := src
 BUILD_DIR := build
 
