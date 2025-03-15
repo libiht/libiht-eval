@@ -77,12 +77,12 @@ int detect_jitlib_overhead(void) {
     unsigned long long start[num_loads], end[num_loads];
 
     for (int i = 0; i < num_loads; i++) {
-        start[i] = __rdtsc();
+        start[i] = _rdtsc();
         if (load_unload_libs(linux_common_libs, linux_common_libs_num) != 0) {
             print_error("Failed to load/unload libraries\n");
             return -1;
         }
-        end[i] = __rdtsc();
+        end[i] = _rdtsc();
     }
 
     for (int i = 0; i < num_loads; i++) {

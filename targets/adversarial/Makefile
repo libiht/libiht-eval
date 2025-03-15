@@ -1,7 +1,8 @@
 # Makefile for adversarial/ directory
 
 CC := gcc
-CFLAGS := -Wall -Wextra -Iinclude
+CFLAGS := -Wall -Wextra -Iinclude -Og -g
+LDFLAGS := -lm
 SRC_DIR := src
 BUILD_DIR := build
 
@@ -23,7 +24,7 @@ all: $(SAMPLE_BINS)
 
 # Rule to build each sample binary from its .c + the common object files
 $(BUILD_DIR)/%: $(SRC_DIR)/%.c $(COMMON_OBJ) | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -o $@ $< $(COMMON_OBJ)
+	$(CC) $(CFLAGS) -o $@ $< $(COMMON_OBJ) $(LDFLAGS)
 
 # Rule to build the common object files
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
