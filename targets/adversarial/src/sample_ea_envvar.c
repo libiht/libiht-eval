@@ -1,7 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
 //  File          : src/sample_ea_envvar.c
-//  Description   :
+//  Description   : This is a sample program that detects environmental
+//                  variables.
 //
 //   Author : Thomason Zhao
 //
@@ -40,6 +41,15 @@ static const char *dyninst_env_var[] = {"DYNINSTAPI_RT_LIB"};
 static const int inj_env_var_num = 2;
 static const char *inj_env_var[] = {"LD_PRELOAD", "LD_AUDIT"};
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// Function     : detect_env_var
+// Description  : Detect the presence of DBI framwork environment variables
+//
+// Inputs       : env_var - array of environment variables to check
+//                env_var_num - number of environment variables to check
+// Outputs      : 0 if no environment variables are detected, -1 otherwise
+
 int detect_env_var(char const *env_var[], int env_var_num) {
     for (int i = 0; i < env_var_num; i++) {
         if (getenv(env_var[i]) != NULL) {
@@ -61,9 +71,9 @@ int main(int argc, char *argv[]) {
     detected |= detect_env_var(inj_env_var, inj_env_var_num);
 
     if (detected == 0) {
-        print_verbose("No environmental artifacts detected\n");
+        print_verbose("Environmental artifacts not detected\n");
     } else {
-        print_verbose("Detected environmental artifacts, abort\n");
+        print_verbose("Environmental artifacts detected\n");
         exit(1);
     }
 
