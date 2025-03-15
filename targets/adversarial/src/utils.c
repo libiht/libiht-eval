@@ -41,6 +41,9 @@ void process_command_line(int argc, char *argv[]) {
                 print_usage();
         }
     }
+
+    print_verbose("Program name: %s\n", progname);
+    print_verbose("Program description: %s\n", progdesc);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
