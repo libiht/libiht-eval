@@ -20,7 +20,7 @@
 // Global variables
 
 const char *progname = "sample_ca_smc";
-const char *progdesc = "Sample adopts code cache / instruction artifacts - checks for SMC detection";
+const char *progdesc = "Sample adopts code cache / instruction artifacts detection - checks for SMC detection";
 int verbose = 0;
 int debug = 0;
 
