@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//  File          : src/sample_ea_vmleave.c
+//  File          : src/sample_ca_vmleave.c
 //  Description   : This is a sample program that detects known code patterns
 //                  (VMLeave) for anti-instrumentation techniques.
 //
@@ -19,7 +19,7 @@
 //
 // Global variables
 
-const char *progname = "sample_ea_vmleave";
+const char *progname = "sample_ca_vmleave";
 const char *progdesc = "Sample adopts environmental artifact detection - checks for known code patterns (VMLeave) for anti-instrumentation techniques.";
 int verbose = 0;
 int debug = 0;

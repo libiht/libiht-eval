@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//  File          : src/sample_ca_fsbase.c
+//  File          : src/sample_fl_fsbase.c
 //  Description   : This is a sample program that detects if fsbase value is
 //                  the same using rdfsbase and prctl.
 //
@@ -26,7 +26,7 @@
 //
 // Global variables
 
-const char *progname = "sample_ca_fsbase";
+const char *progname = "sample_fl_fsbase";
 const char *progdesc = "Sample adopts code cache / instruction artifacts detection - detect if fsbase value is the same using rdfsbase and prctl.";
 int verbose = 0;
 int debug = 0;

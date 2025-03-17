@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//  File          : src/sample_ca_ripsyscall.c
+//  File          : src/sample_fl_ripsyscall.c
 //  Description   : This is a sample program that detect whether rip value
 //                  is saved in rcx after syscall instruction.
 //
@@ -23,7 +23,7 @@
 //
 // Global variables
 
-const char *progname = "sample_ca_ripsyscall";
+const char *progname = "sample_fl_ripsyscall";
 const char *progdesc = "Sample adopts code cache / instruction artifacts detection - check whether rip value is saved in rcx after syscall instruction.";
 int verbose = 0;
 int debug = 0;
