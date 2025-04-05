@@ -1,7 +1,7 @@
 # ---
 # Eval specific
-tools/*
-!tools/.gitkeep
+tools/dynamorio
+tools/pin
 
 
 # ---
