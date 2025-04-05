@@ -1,10 +1,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//  File          : drcfg.c
+//  File          : drcftrace.c
 //  Description   : This file mainly references the cbrtrace.c and instrcalls.c
 //                  file from DynamoRIO sample tools. This will trace all
 //                  control flow transitions in the application and log them to
-//                  a file. The file will be named drcfg.<pid>.<tid>.log and
+//                  a file. The file will be named drcftrace.<pid>.<tid>.log and
 //                  will be located in the client library directory. The log
 //                  will contain the following information:
 //                  - The address of the instruction that caused the transition
@@ -69,7 +69,7 @@ event_thread_init(void *drcontext)
 {
     file_t log;
     log =
-        log_file_open(client_id, drcontext, NULL /* using client lib path */, "drcfg",
+        log_file_open(client_id, drcontext, NULL /* using client lib path */, "drcftrace",
 #ifndef WINDOWS
                       DR_FILE_CLOSE_ON_FORK |
 #endif
@@ -87,10 +87,10 @@ event_thread_exit(void *drcontext)
 static void
 event_exit(void)
 {
-    dr_log(NULL, DR_LOG_ALL, 1, "Client 'drcfg' exiting");
+    dr_log(NULL, DR_LOG_ALL, 1, "Client 'drcftrace' exiting");
 #ifdef SHOW_RESULTS
     if (dr_is_notify_on())
-        dr_fprintf(STDERR, "Client 'drcfg' exiting\n");
+        dr_fprintf(STDERR, "Client 'drcftrace' exiting\n");
 #endif
     if (!drmgr_unregister_bb_insertion_event(event_app_instruction) ||
         !drmgr_unregister_tls_field(tls_idx))
@@ -102,9 +102,9 @@ DR_EXPORT
 void
 dr_client_main(client_id_t id, int argc, const char *argv[])
 {
-    dr_set_client_name("DynamoRIO Sample Client 'drcfg'",
+    dr_set_client_name("DynamoRIO Sample Client 'drcftrace'",
                        "http://dynamorio.org/issues");
-    dr_log(NULL, DR_LOG_ALL, 1, "Client 'drcfg' initializing");
+    dr_log(NULL, DR_LOG_ALL, 1, "Client 'drcftrace' initializing");
 
     drmgr_init();
 
@@ -122,7 +122,7 @@ dr_client_main(client_id_t id, int argc, const char *argv[])
 #    ifdef WINDOWS
         dr_enable_console_printing();
 #    endif /* WINDOWS */
-        dr_fprintf(STDERR, "Client 'drcfg' is running\n");
+        dr_fprintf(STDERR, "Client 'drcftrace' is running\n");
     }
 #endif /* SHOW_RESULTS */
 }

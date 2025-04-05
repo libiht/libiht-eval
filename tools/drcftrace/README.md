@@ -1,4 +1,4 @@
-# drcfg
+# drcftrace
 
 Control flow graph (CFG) generation tool for DynamoRIO.
 

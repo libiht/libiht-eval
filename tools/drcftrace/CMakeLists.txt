@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(drcfg)
-add_library(drcfg SHARED
-    drcfg.c
+project(drcftrace)
+add_library(drcftrace SHARED
+    drcftrace.c
     utils.c
 )
 
@@ -11,6 +11,6 @@ if (NOT DynamoRIO_FOUND)
   message(FATAL_ERROR "DynamoRIO package required to build")
 endif(NOT DynamoRIO_FOUND)
 
-configure_DynamoRIO_client(drcfg)
-use_DynamoRIO_extension(drcfg "drmgr")
-use_DynamoRIO_extension(drcfg "drx")
+configure_DynamoRIO_client(drcftrace)
+use_DynamoRIO_extension(drcftrace "drmgr")
+use_DynamoRIO_extension(drcftrace "drx")
