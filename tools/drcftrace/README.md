@@ -1,6 +1,6 @@
 # drcftrace
 
-Control flow graph (CFG) generation tool for DynamoRIO.
+Control flow trace tool for DynamoRIO.
 
 ## Build Instructions
 To build with CMake and Make:
