@@ -1,8 +1,8 @@
 # Makefile for adversarial/ directory
 
 CC := gcc
-CFLAGS := -Wall -Wextra -Iinclude -Og -g -march=native
-LDFLAGS :=
+CFLAGS := -Wall -Wextra -Iinclude -Og -g -march=native -fno-pie
+LDFLAGS := -no-pie
 SRC_DIR := src
 BUILD_DIR := build
 
