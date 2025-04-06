@@ -26,12 +26,11 @@ static int tls_idx;
 static void
 at_cbr(app_pc inst_addr, app_pc targ_addr, int taken)
 {
+    if (!taken) return;
+    /* We only log the taken branch */
     void *drcontext = dr_get_current_drcontext();
     file_t log = (file_t)(ptr_uint_t)drmgr_get_tls_field(drcontext, tls_idx);
-    /* We only log the taken branch */
-    if (taken) {
-        dr_fprintf(log, "" PFX " => " PFX "\n", inst_addr, targ_addr);
-    }
+    dr_fprintf(log, "" PFX " => " PFX "\n", inst_addr, targ_addr);
 }
 
 /* Clean call for the control flow transitions */
